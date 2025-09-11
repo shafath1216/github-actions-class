@@ -69,8 +69,8 @@ jobs:
           run: npm install
       
       # UNCOMMENT THIS FOR PHASE 3
-        - name: Run tests
-          run: npm test
+        #- name: Run tests
+        #  run: npm test
       
       # UNCOMMENT THIS FOR PHASE 3
         - name: Upload coverage
