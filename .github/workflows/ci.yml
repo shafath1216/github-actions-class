@@ -74,7 +74,7 @@ jobs:
       
       # UNCOMMENT THIS FOR PHASE 3
       - name: Upload coverage
-        run: mkdir coverage && echo "Coverage report" > coverage/coverage.txt
+        run: mkdir coverage && echo "Coverage ${{ matrix.node-version }}" > coverage/coverage.txt
       
       # UNCOMMENT THIS FOR PHASE 3
       - name: Upload artifact
