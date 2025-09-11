@@ -16,11 +16,11 @@ jobs:
         run: echo "Hello GitHub Actions from ${{ github.actor }}!"
       
       # UNCOMMENT THIS FOR PHASE 1
-      # - name: Show GitHub context
-      #   run: |
-      #     echo "Event: ${{ github.event_name }}"
-      #     echo "Branch: ${{ github.ref }}"
-      #     echo "Commit SHA: ${{ github.sha }}"
+      - name: Show GitHub context
+         run: |
+           echo "Event: ${{ github.event_name }}"
+           echo "Branch: ${{ github.ref }}"
+           echo "Commit SHA: ${{ github.sha }}"
 
   # ========================================
   # PHASE 2: ADVANCED BEGINNER (Basic Automation)
