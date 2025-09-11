@@ -5,45 +5,45 @@ jobs:
   # ========================================
   # PHASE 1: NOVICE (Foundations)
   # ========================================
-  phase1-hello-world:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        
-      # UNCOMMENT THIS FOR PHASE 1
-      - name: Hello World
-        run: echo "Hello GitHub Actions from ${{ github.actor }}!"
-      
-      # UNCOMMENT THIS FOR PHASE 1
-      - name: Show GitHub context
-        run: |
-           echo "Event: ${{ github.event_name }}"
-           echo "Branch: ${{ github.ref }}"
-           echo "Commit SHA: ${{ github.sha }}"
-
-  # ========================================
-  # PHASE 2: ADVANCED BEGINNER (Basic Automation)
-  # ========================================
-  #phase2-node-test:
+  #phase1-hello-world:
   #  runs-on: ubuntu-latest
   #  steps:
   #    - name: Checkout code
   #      uses: actions/checkout@v4
         
+      # UNCOMMENT THIS FOR PHASE 1
+  #    - name: Hello World
+  #      run: echo "Hello GitHub Actions from ${{ github.actor }}!"
+      
+      # UNCOMMENT THIS FOR PHASE 1
+  #    - name: Show GitHub context
+  #      run: |
+  #         echo "Event: ${{ github.event_name }}"
+  #         echo "Branch: ${{ github.ref }}"
+  #         echo "Commit SHA: ${{ github.sha }}"
+
+  # ========================================
+  # PHASE 2: ADVANCED BEGINNER (Basic Automation)
+  # ========================================
+  phase2-node-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
       # UNCOMMENT THIS FOR PHASE 2
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: '20'
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+           node-version: '20'
       
       # UNCOMMENT THIS FOR PHASE 2
-      # - name: Install dependencies
-      #   run: npm install
+      - name: Install dependencies
+        run: npm install
       
       # UNCOMMENT THIS FOR PHASE 2
-      # - name: Run tests
-      #   run: npm test
+      - name: Run tests
+        run: npm test
 
   # ========================================
   # PHASE 3: COMPETENT (Real-World Workflows)
