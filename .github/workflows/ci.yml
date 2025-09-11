@@ -32,18 +32,18 @@ jobs:
         uses: actions/checkout@v4
         
       # UNCOMMENT THIS FOR PHASE 2
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-           node-version: '20'
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '20'
       
       # UNCOMMENT THIS FOR PHASE 2
-      - name: Install dependencies
-        run: npm install
+      # - name: Install dependencies
+      #   run: npm install
       
       # UNCOMMENT THIS FOR PHASE 2
-      - name: Run tests
-        run: npm test
+      # - name: Run tests
+      #   run: npm test
 
   # ========================================
   # PHASE 3: COMPETENT (Real-World Workflows)
@@ -51,37 +51,37 @@ jobs:
   phase3-matrix-secrets:
     runs-on: ubuntu-latest
     # UNCOMMENT THIS FOR PHASE 3
-    # strategy:
-    #   matrix:
-    #     node-version: [18, 20, 21]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    strategy:
+      matrix:
+         node-version: [18, 20, 21]
+       steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
         
       # UNCOMMENT THIS FOR PHASE 3
-      # - name: Setup Node.js ${{ matrix.node-version }}
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: ${{ matrix.node-version }}
+        - name: Setup Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@v4
+          with:
+            node-version: ${{ matrix.node-version }}
       
       # UNCOMMENT THIS FOR PHASE 3
-      # - name: Install dependencies
-      #   run: npm install
+        - name: Install dependencies
+          run: npm install
       
       # UNCOMMENT THIS FOR PHASE 3
-      # - name: Run tests
-      #   run: npm test
+        - name: Run tests
+          run: npm test
       
       # UNCOMMENT THIS FOR PHASE 3
-      # - name: Upload coverage
-      #   run: mkdir coverage && echo "Coverage report" > coverage/coverage.txt
+        - name: Upload coverage
+          run: mkdir coverage && echo "Coverage report" > coverage/coverage.txt
       
       # UNCOMMENT THIS FOR PHASE 3
-      # - name: Upload artifact
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: coverage-${{ matrix.node-version }}
-      #     path: coverage/
+        - name: Upload artifact
+          uses: actions/upload-artifact@v3
+          with:
+            name: coverage-${{ matrix.node-version }}
+            path: coverage/
 
   # ========================================
   # PHASE 4: PROFICIENT (Optimization)
