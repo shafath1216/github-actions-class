@@ -17,7 +17,7 @@ jobs:
       
       # UNCOMMENT THIS FOR PHASE 1
       - name: Show GitHub context
-         run: |
+        run: |
            echo "Event: ${{ github.event_name }}"
            echo "Branch: ${{ github.ref }}"
            echo "Commit SHA: ${{ github.sha }}"
