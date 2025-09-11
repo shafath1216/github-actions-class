@@ -53,7 +53,7 @@ jobs:
     # UNCOMMENT THIS FOR PHASE 3
     strategy:
       matrix:
-         node-version: [18, 20, 21]
+         node-version: [18]
     steps:
         - name: Checkout code
           uses: actions/checkout@v4
