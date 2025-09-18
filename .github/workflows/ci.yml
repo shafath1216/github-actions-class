@@ -6,21 +6,21 @@ jobs:
   # PHASE 1: NOVICE (Foundations)
   # ========================================
   #phase1-hello-world:
-  #  runs-on: ubuntu-latest
-  #  steps:
-  #    - name: Checkout code
-  #      uses: actions/checkout@v4
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
         
-      # UNCOMMENT THIS FOR PHASE 1
-  #    - name: Hello World
-  #      run: echo "Hello GitHub Actions from ${{ github.actor }}!"
+       UNCOMMENT THIS FOR PHASE 1
+      - name: Hello World
+        run: echo "Hello GitHub Actions from ${{ github.actor }}!"
       
       # UNCOMMENT THIS FOR PHASE 1
-  #    - name: Show GitHub context
-  #      run: |
-  #         echo "Event: ${{ github.event_name }}"
-  #         echo "Branch: ${{ github.ref }}"
-  #         echo "Commit SHA: ${{ github.sha }}"
+      - name: Show GitHub context
+        run: |
+           echo "Event: ${{ github.event_name }}"
+           echo "Branch: ${{ github.ref }}"
+           echo "Commit SHA: ${{ github.sha }}"
 
   # ========================================
   # PHASE 2: ADVANCED BEGINNER (Basic Automation)
@@ -48,40 +48,40 @@ jobs:
   # ========================================
   # PHASE 3: COMPETENT (Real-World Workflows)
   # ========================================
-  phase3-matrix-secrets:
-    runs-on: ubuntu-latest
+  #phase3-matrix-secrets:
+   # runs-on: ubuntu-latest
     # UNCOMMENT THIS FOR PHASE 3
-    strategy:
-      matrix:
-         node-version: [18, 20, 21]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    #strategy:
+     # matrix:
+      #   node-version: [18, 20, 21]
+    #steps:
+     # - name: Checkout code
+      #  uses: actions/checkout@v4
         
       # UNCOMMENT THIS FOR PHASE 3
-      - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-           node-version: ${{ matrix.node-version }}
+      #- name: Setup Node.js ${{ matrix.node-version }}
+       # uses: actions/setup-node@v4
+        #with:
+         #  node-version: ${{ matrix.node-version }}
       
       # UNCOMMENT THIS FOR PHASE 3
-      - name: Install dependencies
-        run: npm install
+      #- name: Install dependencies
+       # run: npm install
       
       # UNCOMMENT THIS FOR PHASE 3
-      - name: Run tests
-        run: npm test
+      #- name: Run tests
+       # run: npm test
       
       # UNCOMMENT THIS FOR PHASE 3
-      - name: Upload coverage
-        run: mkdir coverage && echo "Coverage ${{ matrix.node-version }}" > coverage/coverage.txt
+      #- name: Upload coverage
+      # run: mkdir coverage && echo "Coverage ${{ matrix.node-version }}" > coverage/coverage.txt
       
       # UNCOMMENT THIS FOR PHASE 3
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-${{ matrix.node-version }}
-          path: coverage/
+      #- name: Upload artifact
+       # uses: actions/upload-artifact@v4
+        #with:
+         # name: coverage-${{ matrix.#node-version }}
+          #path: coverage/
 
   # ========================================
   # PHASE 4: PROFICIENT (Optimization)
