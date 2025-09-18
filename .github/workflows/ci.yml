@@ -5,7 +5,7 @@ jobs:
   # ========================================
   # PHASE 1: NOVICE (Foundations)
   # ========================================
-  #phase1-hello-world:
+  phase1-hello-world:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
