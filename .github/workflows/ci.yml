@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         
-       UNCOMMENT THIS FOR PHASE 1
+      # UNCOMMENT THIS FOR PHASE 1
       - name: Hello World
         run: echo "Hello GitHub Actions from ${{ github.actor }}!"
       
